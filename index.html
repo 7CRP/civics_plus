@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Polling Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Local Government Participation</p>
+      <h1>Citizens' Decision-Making Hub</h1>
+      <p>Vote on local proposals, submit new ideas, and see community sentiment in real time.</p>
+    </div>
+  </header>
+
+  <section class="panel actions">
+    <form id="pollForm" class="poll-form">
+      <div class="form-group">
+        <label for="pollQuestion">Proposal title</label>
+        <input id="pollQuestion" name="question" type="text" placeholder="Ex: Add protected bike lanes?" required>
+      </div>
+      <div class="form-group">
+        <label for="pollDescription">Why this matters</label>
+        <textarea id="pollDescription" name="description" rows="3" placeholder="Optional details for voters..."></textarea>
+      </div>
+      <button type="submit" class="primary">Submit proposal</button>
+    </form>
+
+    <div class="search-panel">
+      <input id="searchInput" type="search" placeholder="Search proposals...">
+      <div class="summary-area">
+        <span id="pollSummary" class="summary"></span>
+        <select id="sortSelect" aria-label="Sort proposals">
+          <option value="recent">Newest first</option>
+          <option value="popular">Most voted</option>
+          <option value="yes">Highest yes%</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div id="polls" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Empowering citizens to shape local decisions through transparent, community-driven polls.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

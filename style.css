@@ -1,0 +1,274 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef2ff;
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #eef2ff 0%, #dbeafe 45%, #f8fafc 100%);
+}
+
+.hero {
+  padding: 48px 24px 12px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  line-height: 1.05;
+}
+
+p {
+  margin: 16px auto 0;
+  max-width: 720px;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.panel {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.actions {
+  display: grid;
+  gap: 20px;
+}
+
+.poll-form {
+  display: grid;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.poll-form label {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.poll-form input,
+.poll-form textarea,
+.search-panel input,
+.search-panel select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 18px;
+  font-size: 1rem;
+  background: white;
+  color: #0f172a;
+}
+
+.poll-form textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.search-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.summary-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+button,
+button.primary {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover,
+button.primary:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.18);
+}
+
+button:disabled {
+  background: #c7d2fe;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 24px 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+.card-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.poll-date {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.description {
+  margin: 16px 0 0;
+  color: #334155;
+  line-height: 1.75;
+}
+
+.tallies {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 18px 0 14px;
+  color: #475569;
+  font-weight: 700;
+}
+
+.meter {
+  position: relative;
+  height: 14px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.fill {
+  height: 100%;
+}
+
+.fill.yes {
+  background: #4ade80;
+}
+
+.fill.no {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #f97316;
+}
+
+.percent {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.vote-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.vote-actions button {
+  flex: 1;
+}
+
+.voted-badge {
+  margin: 16px 0 0;
+  color: #2563eb;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #64748b;
+  padding: 40px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 12px 24px 32px;
+  color: #475569;
+}
+
+@media (max-width: 720px) {
+  .actions {
+    padding: 0;
+  }
+
+  .summary-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
